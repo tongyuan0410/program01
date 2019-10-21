@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>姓名</th>		
+			<th>密码</th>
+			<th>index</th>
+			<th>first</th>
+			<th>last</th>
+					
+		</tr>
+		<tr th:each=" i,f : ${data}">
+			<td th:text="${i.u_name }"></td>
+			<td th:text="${i.u_password }"></td>
+			<td th:text="${f.index}"></td>
+			<td th:text="${f.first}"></td>
+			<td th:text="${f.last}"></td>
+		</tr>
+	</table>
+</body>
+</html>
